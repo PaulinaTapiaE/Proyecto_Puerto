@@ -37,7 +37,7 @@ def main(input_folder, output_folder, name_archivo):
     
     result_df_cola = pd.concat([df_cola_v,df_cola_sa],ignore_index=True)
     
-    df_servicio_v = pd.read_csv(input_folder+'/Tpo_Servicio_Nave_V.csv')
+    df_servicio_v = pd.read_csv(input_folder+'/Tpo_Servicio_Nave_S.csv')
     df_servicio_v = df_servicio_v[['Replica','Numero de Nave', 'Terminal', 'Tipo Nave', 'Tpo Atencion Nave [dias]', 'Tipo_Carga']]
     df_servicio_v['Naves de Carga'] = df_servicio_v['Tipo Nave'].apply(naves_de_carga)
     df_servicio_v['Puerto'] = 'V'
